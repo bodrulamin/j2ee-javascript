@@ -3,86 +3,7 @@
 <head>
 
     <title>Studen Information</title>
-
-    <style>
-        form {
-            width: 500px;
-            margin: auto;
-
-
-        }
-
-        fieldset {
-            border-radius: 10px;
-            border: 1px solid gray;
-            background-color: #E5E8E8;
-
-
-
-        }
-
-        legend {
-            background-color: #DE3163;
-            padding: 10px;
-            color: white;
-            margin: auto;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 20px;
-
-
-        }
-
-        .button-holder {
-            margin: auto;
-            padding: 10px;
-            /* float: right;       */
-        }
-
-        .input-container {
-            background-color: #E5E8E8;
-            margin: 3px;
-            padding: 10px;
-            border-radius: 5px;
-
-        }
-
-        label {
-            width: 100px;
-            display: inline-block;
-            font-weight: bold;
-
-        }
-
-
-        .submitbtn {
-
-            background-color: green;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            border: 2px solid pink;
-            float: right;
-            font-weight: bold;
-
-
-        }
-
-        .submitbtn:hover {
-            background-color: white;
-            color: maroon;
-            border-radius: 5px;
-            border: 2px solid black;
-
-
-        }
-
-        textarea {
-            vertical-align: top;
-
-        }
-    </style>
-
+    <link rel="stylesheet" href="style1.css">
 
 
 </head>
@@ -90,30 +11,31 @@
 <body>
     <form class="form" action="index.html" method="post">
         <fieldset>
-            <legend>Student Information</legend>
-
+            <legend>
+                <div class="legend-container">Student Information</div>
+            </legend>
             <!--             id -->
             <div class="input-container">
-                <label for="id">ID:</label>
+                <label for="id">ID </label>
                 <input type="text" name="id" placeholder="Your student id">
             </div>
 
 
             <!--             name -->
             <div class="input-container">
-                <label for="name">Name:</label>
+                <label for="name">Name </label>
                 <input type="text" name="name" placeholder="Your name">
             </div>
 
             <!--             address -->
             <div class="input-container">
-                <label for="address">Address:</label>
+                <label for="address">Address </label>
                 <textarea name="address" placeholder="Your address"></textarea>
             </div>
 
             <!--             course -->
             <div class="input-container">
-                <label for="course">Course:</label>
+                <label for="course">Course </label>
 
                 <select name="course">
                     <option>J2EE</option>
@@ -126,7 +48,7 @@
 
             <!--             gender -->
             <div class="input-container">
-                <label for="gender">Gender:</label>
+                <label for="gender">Gender </label>
                 <input type="radio" name="gender" />Male
                 <input type="radio" name="gender" />Female
 
@@ -135,7 +57,7 @@
             <!--             skill -->
 
             <div class="input-container">
-                <label for="skill">Skill:</label>
+                <label for="skill">Skill </label>
                 <input type="checkbox" name="gender" />HTML
                 <input type="checkbox" name="gender" />CSS
                 <input type="checkbox" name="gender" />Bootstrap
