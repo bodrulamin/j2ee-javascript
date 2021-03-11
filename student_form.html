@@ -3,7 +3,7 @@
 <head>
 
     <title>Studen Information</title>
-    <link rel="stylesheet" href="style1.css">
+    <link id="style" rel="stylesheet" href="">
 
 
 </head>
@@ -74,6 +74,42 @@
 
         </fieldset>
     </form>
+
+
+
+
+
+
+
+
+    <script>
+
+        function styleOne() {
+
+            var link = document.getElementById('style');
+            link.setAttribute('href', 'style1.css');
+        }
+        function styleTwo() {
+
+            var link = document.getElementById('style');
+            link.setAttribute('href', 'style2.css');
+        }
+        function styleThree() {
+
+            var link = document.getElementById('style');
+            link.setAttribute('href', 'style3.css');
+        }
+
+        styleThree();
+
+    </script>
+
+
+<button onclick="styleOne()">Style 1</button>
+<button onclick="styleTwo()">Style 2</button>
+<button onclick="styleThree()">Style 3</button>
+
+
 </body>
 
 </html>
