@@ -80,34 +80,49 @@
 
 
 
-
+    <button id="btn1" onclick="styleOne()">Style 1</button>
+    <button  id="btn2"  onclick="styleTwo()">Style 2</button>
+    <button  id="btn3"  onclick="styleThree()">Style 3</button>
 
     <script>
+
+ 
 
         function styleOne() {
 
             var link = document.getElementById('style');
             link.setAttribute('href', 'style1.css');
+            document.getElementById('btn1').style = 'background-color:pink;';
+            document.getElementById('btn2').style = 'background-color:white;';
+            document.getElementById('btn3').style = 'background-color:white;';
         }
         function styleTwo() {
 
             var link = document.getElementById('style');
             link.setAttribute('href', 'style2.css');
+
+
+            document.getElementById('btn1').style = 'background-color:white;';
+            document.getElementById('btn2').style = 'background-color:pink;';
+            document.getElementById('btn3').style = 'background-color:white;';
         }
         function styleThree() {
 
             var link = document.getElementById('style');
             link.setAttribute('href', 'style3.css');
+            document.getElementById('btn1').style = 'background-color:white;';
+            document.getElementById('btn2').style = 'background-color:white;';
+            document.getElementById('btn3').style = 'background-color:pink;';
         }
 
+
         styleThree();
+        
 
     </script>
 
 
-<button onclick="styleOne()">Style 1</button>
-<button onclick="styleTwo()">Style 2</button>
-<button onclick="styleThree()">Style 3</button>
+
 
 
 </body>
