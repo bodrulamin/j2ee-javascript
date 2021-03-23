@@ -1,0 +1,2 @@
+// 10. Write a JavaScript program to check whether a string starts with 'Java' and false otherwise.
+ 
