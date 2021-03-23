@@ -1,4 +1,4 @@
-# j2ee-javascript
+# J2EE-Javascript
 
 ### These repository contains my practices javascript files of j2ee course under IsDB-BISEW
 
