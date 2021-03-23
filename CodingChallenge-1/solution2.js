@@ -1,10 +1,5 @@
 
-
-function triangleAreaCalculation(a,b,c) {
-    var s = (a+b+c)/2;
-    var area = Math.sqrt((s*(s-a)*(s-b)*(s-c)));
-    return area;
-}
+// 2. Write a JavaScript exercise to create a variable using a user-defined name.
 
 
-console.log(triangleAreaCalculation(5,6,7));
+ 
