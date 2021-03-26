@@ -1,6 +1,6 @@
 # Coding Challege-1 in Javascript
 
-1. Write a Javascript function to find the area of triangle where length of the three of its sides are 5,6,7. [Solution](https://github.com/bodrulamin/j2ee-javascript/blob/main/CodingChallenge-1/solution1.js)
+1.[Write a Javascript function to find the area of triangle where length of the three of its sides are 5,6,7.](https://github.com/bodrulamin/j2ee-javascript/blob/main/CodingChallenge-1/solution1.js)
 
 2. Write a JavaScript exercise to create a variable using a user-defined name.
 
