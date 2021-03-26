@@ -2,9 +2,9 @@
 
 1.[Write a Javascript function to find the area of triangle where length of the three of its sides are 5,6,7.](https://github.com/bodrulamin/j2ee-javascript/blob/main/CodingChallenge-1/solution1.js)
 
-2. Write a JavaScript exercise to create a variable using a user-defined name.
+2. [Write a JavaScript exercise to create a variable using a user-defined name.](https://github.com/bodrulamin/j2ee-javascript/blob/main/CodingChallenge-1/solution2.js)
 
-3. Write a JavaScript program to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference.
+3. [Write a JavaScript program to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference.](https://github.com/bodrulamin/j2ee-javascript/blob/main/CodingChallenge-1/solution3.js)
 
 4. Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50.
 
