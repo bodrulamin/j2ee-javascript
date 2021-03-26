@@ -6,7 +6,7 @@
 
 3. [Write a JavaScript program to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference.](https://github.com/bodrulamin/j2ee-javascript/blob/main/CodingChallenge-1/solution3.js)
 
-4. Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50.
+4. [Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50.](https://github.com/bodrulamin/j2ee-javascript/blob/main/CodingChallenge-1/solution4.js)
 
 5. Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.
 
