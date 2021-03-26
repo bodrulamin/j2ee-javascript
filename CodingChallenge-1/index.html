@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 
     <script src="solution10.js"></script>
+
+ 
+
+
+
+    <script>
+       var nowDate = new Date();
+       var day = nowDate.getDay();
+       let days = [];
+       days.push('Sunday');
+       days.push('Monday');
+       days.push('Tuesday');
+       days.push('Tuesday');
+       days.push('Wednesday');
+       days.push('Friday');
+       days.push('Saturday');
+
+       console.log("Today is : " +days[day]);
+       
+       let hr = nowDate.getHours();
+       let min = nowDate.getMinutes();
+let ampm = "";
+
+       if(hr>12){
+           hr = hr - 12 ;
+           ampm = 'PM';
+
+       }else ampm = 'AM'
+
+console.log('Current time is : ' + hr + ":" + min + ampm);
+       
+
+
+
+    </script>
+
+ 
+
+
 </body>
+
 </html>
