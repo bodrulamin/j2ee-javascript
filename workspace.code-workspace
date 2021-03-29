@@ -1,7 +1,8 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"name": "form_design",
+			"path": "../J2EE/form_design"
 		}
 	],
 	"settings": {}
