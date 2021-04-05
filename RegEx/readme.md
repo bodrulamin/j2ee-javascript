@@ -10,6 +10,13 @@
   // exact match between ^ and $
  ```
 
+
+
+ ```javascript
+\.
+means dot
+ ```
+
  ```javascript
 .
 dot means any letters /a.b/
