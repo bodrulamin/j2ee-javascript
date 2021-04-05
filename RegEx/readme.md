@@ -6,23 +6,28 @@
 ```
 
  ```javascript
- /^$/ 
+    /^$/ 
   // exact match between ^ and $
  ```
 
-
+ ```javascript
 .
 dot means any letters /a.b/
+ ```
 
+  ```javascript
 + 
 atleast one or more than one
+ ```
 
+   ```javascript
 {}
 fix length, or range {2,8}
-
+```
+  ```javascript
 ?
 means optional
-
+```
 
 
 
