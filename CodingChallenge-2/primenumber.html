@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<input type="text" id="inputbox">
+<input type="button" value="checkPrime" onclick="checkPrime()">
+
+<body>
+
+
+
+  <script>
+    // prime number
+    function checkPrime() {
+      var value = document.getElementById('inputbox').value;
+      var n = parseInt(value);
+      if (isPrime(n)) {
+        console.log(value + " is prime");
+      }
+      else {
+        console.log(value + " is not prime");
+      }
+    }
+
+
+    function isPrime(n) {
+      var c = 0;
+      if (n <= 1) {
+        return false;
+      }
+
+      for (var i = 1; i <= n; i++) {
+        if (n % i == 0) {
+          c++;
+
+
+        }
+      }
+
+      if (c == 2) {
+        return true;
+      } else {
+        return false;
+      }
+
+
+    }
+
+
+    // function isPrime(n) {
+
+    //   if (n < 2) {
+    //     return false;
+    //   } else {
+
+    //     for (var i = 2; i < n; i++) {
+    //       if (n % i == 0) {
+    //         return false;
+    //       }
+    //     }
+
+    //     return true;
+    //   }
+
+    // }
+
+
+    // console.log(isPrime(5));
+
+
+  </script>
+</body>
+
+</html>
