@@ -1,9 +1,9 @@
 # Email validation
 
 ###  
- 
+ ```
  var regex = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
-
+```
  /^$/ 
  exact match between ^ and $
 
