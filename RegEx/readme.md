@@ -7,8 +7,9 @@
 
  ```javascript
  /^$/ 
+  // exact match between ^ and $
  ```
- exact match between ^ and $
+
 
 .
 dot means any letters /a.b/
