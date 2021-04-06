@@ -34,12 +34,14 @@
         //  bodrul-am.in00@reeady-togo55.com.bd
         //  +?.*^  these have meanings
         //() () ()
-           // var regex = /^(\w)@([a-z0-9-]+).([a-z]{2,8})$/;
-             var regex = /^\w+.?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
+        
 
 
-             
-        //var regex = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+)(.[a-z]{2,8})(.[a-z]{2,8})?$/;
+
+         var regex = /^([a-z0-9]+)([\.]{1}[a-z0-9]+)?@([a-z0-9]+)\.{1}([a-z]{2,8})$/;
+       //  var regex = /^([a-z0-9]+)([\.]{1})?([a-z0-9]+)?@([a-z0-9]+)\.{1}([a-z]{2,8})$/;
+
+
             var isValid = regex.test(email.toLowerCase());
 
             if (isValid) {
