@@ -17,13 +17,12 @@
 </style>
 
 <body>
- 
-        Email <input type="email" name="" id="email">
-        <input type="submit" value="submit" onclick="validate(email.value, result)">
 
-        <div class="r" id="result"> result </div>
+    Email <input type="email" name="" id="email">
+    <input type="submit" value="submit" onclick="validate(email.value, result)">
 
- 
+    <div class="r" id="result"> result </div>
+
 
     <script>
 
@@ -31,15 +30,12 @@
         function validate(email, result) {
 
 
-        //  bodrul-am.in00@reeady-togo55.com.bd
-        //  +?.*^  these have meanings
-        //() () ()
-        
+            //  bodrul-am.in00@reeady-togo55.com
+            //  + ?.*^ $ these have meanings
+            //() () ()
 
+            var regex = /^([a-z0-9-]+)(([\.]{1}[a-z0-9-]+)*)?@([a-z0-9-]+)\.{1}([a-z]{2,8})$/;
 
-
-         var regex = /^([a-z0-9-]+)(([\.]{1}[a-z0-9-]+)*)?@([a-z0-9-]+)\.{1}([a-z]{2,8})$/;
- 
             var isValid = regex.test(email.toLowerCase());
 
             if (isValid) {
@@ -50,14 +46,7 @@
                 result.style = "color: red";
 
             }
-
-
-
         }
-
-
-
-
     </script>
 </body>
 
