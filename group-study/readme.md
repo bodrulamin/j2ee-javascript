@@ -1,6 +1,6 @@
 # Group Study
 
-## 19-04-2021
+### 19-04-2021
 * data types
 * string methods:
 * concat(),
@@ -9,7 +9,8 @@
 * substring()
 * substr()
 
-## 20-04-2021
+
+### 20-04-2021
 
 * replace()
 * indexOf()
