@@ -1,7 +1,7 @@
-## Group Study
+# Group Study
 
-### 19-04-2021
-###data types
+## 19-04-2021
+### data types
 * string methods:
 * concat(),
 * trim()
