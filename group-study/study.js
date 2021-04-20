@@ -1,4 +1,6 @@
-   /* 
+ /* 
+
+
 
    19-04-2021
       data types
@@ -17,5 +19,8 @@
       slice()
       charAt()
       split()
+
+
+
 
      */
