@@ -9,4 +9,11 @@
 * substring()
 * substr()
 
+## 20-04-2021
 
+* replace()
+* indexOf()
+* lastIndexOf()
+* slice()
+* charAt()
+* split(
