@@ -1,9 +1,9 @@
 # Group Study
 
 ### 19-04-2021
-* data types
+##### data types
 ##### string methods:
-* concat(),
+* concat()
 * trim()
 * replace()
 * substring()
@@ -17,6 +17,22 @@
 * lastIndexOf()
 * slice()
 * charAt()
-* split()
+* split("")
 
 ### 21-04-2021
+
+* shift()
+* unshift()
+* push()
+* pop()
+* join()
+* toString()
+* sort()
+* concat()
+* reverse()
+* indexOf()
+* lastIndexOf()
+* for of loop
+* splice()
+ 
+ 
