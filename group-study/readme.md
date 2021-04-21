@@ -12,7 +12,7 @@
 
 ### 20-04-2021
 
-* replace()
+* replace() // with regex
 * indexOf()
 * lastIndexOf()
 * slice()
