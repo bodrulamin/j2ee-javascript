@@ -2,7 +2,7 @@
 
 ### 19-04-2021
 * data types
-* string methods:
+#### string methods:
 * concat(),
 * trim()
 * replace()
@@ -18,3 +18,5 @@
 * slice()
 * charAt()
 * split(
+
+### 20-04-2021
