@@ -17,6 +17,6 @@
 * lastIndexOf()
 * slice()
 * charAt()
-* split(
+* split()
 
-### 20-04-2021
+### 21-04-2021
