@@ -39,7 +39,8 @@
 
 ### 22-04-2021
 * filter()
-* find max (problem 12-solution3)
+* find positive ( problem 12-solution3)
+* find max (problem 13)
 * Math.max(...array)
 
 
