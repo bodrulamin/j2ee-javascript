@@ -35,5 +35,11 @@
 * lastIndexOf()
 * for of loop
 * splice()
- 
- 
+
+
+### 21-04-2021
+* revise + excercise
+* filter()
+* find max (problem 12-solution3)
+
+
