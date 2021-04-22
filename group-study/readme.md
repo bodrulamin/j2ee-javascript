@@ -38,8 +38,8 @@
 
 
 ### 22-04-2021
-* revise + excercise
 * filter()
 * find max (problem 12-solution3)
+* Math.max(...array)
 
 
