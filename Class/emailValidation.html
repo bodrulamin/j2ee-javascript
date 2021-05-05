@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+</head>
+
+<body>
+    <label>Email</label>
+    <input type="text" oninput="validateEmail(this.value,msg)" name="email" id="email">
+    <span class="msg" id="msg"></span>
+
+    <script>
+
+        function validateEmail(email,msg) {
+            var regex = new RegExp(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]{2,6}$/);
+            var result = regex.test(email);
+            if (result) {
+                msg.innerHTML = "valid";
+                msg.style.color = "green";
+            } else {
+                msg.innerHTML = "invalid";
+                msg.style.color = "red";
+            }
+        }
+/*
+
+        primenumber
+        factorial
+        fibonacci
+        email validation
+        summation from Array prompt -1 dile jogfol dekhabe
+         
+
+*/
+    </script>
+</body>
+
+</html>

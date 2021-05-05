@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        .inputbox {
+            margin: 5px;
+        }
+
+        .msg {
+            color: red;
+            margin: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="inputbox">
+        <label for="">ID</label>
+        <input id="id" onfocusout="validateId(this.value,idMsg)" />
+        <span class="msg" id="idMsg"></span>
+    </div>
+
+    <div class="inputbox">
+
+        <label for="">Name</label>
+        <input id="name" onfocusout="validateName(this.value,nameMsg)" />
+        <span class="msg" id="nameMsg"></span>
+    </div>
+
+    <div class="inputbox">
+        <label for="">Mobile</label>
+        <input id="mobile" onfocusout="validateMob(this.value,mobMsg)" />
+        <span class="msg" id="mobMsg"></span>
+    </div>
+
+    <div class="inputbox">
+        <label for="">Address</label>
+        <input id="address" onfocusout="validateAddress(this.value,addMsg)" />
+        <span class="msg" id="addMsg"></span>
+    </div>
+
+    <div class="inputbox">
+        <label for="">Gender</label>
+        <input type="radio" onclick="setMale(genMsg)" name="gender" id="male" />Male
+        <input type="radio" onclick="setFemale(genMsg)" name="gender" id="female" />Female
+        <span class="msg" id="genMsg"></span>
+
+    </div>
+
+    <button onclick="reCheck(male,female,genMsg)">Submit</button>
+
+    <script>
+
+        function validateId(value, span) {
+            var reg = /^[0-9]{6}$/;
+
+            if (reg.test(value)) {
+                console.log('valid');
+                span.innerHTML = "";
+            } else {
+                console.log('invalid');
+                span.innerHTML = "it is invalid";
+            }
+
+        }
+
+        function validateName(value, span) {
+            var reg = /^[a-zA-Z\s]{4,16}$/;
+
+            if (reg.test(value)) {
+                console.log('valid');
+                span.innerHTML = "";
+
+            } else {
+                console.log('invalid');
+                span.innerHTML = "insert valid name (4-16 charecter)";
+            }
+
+        }
+
+        function validateMob(value, span) {
+            var reg = /^[0-9]{11}$/;
+
+            if (reg.test(value)) {
+                console.log('valid');
+                span.innerHTML = "";
+            } else {
+                console.log('invalid');
+                span.innerHTML = "insert correct mobile no (11 digits)";
+            }
+
+        }
+
+        function validateAddress(value, span) {
+            var reg = /^[a-zA-Z0-9\s.-]+$/;
+
+            if (reg.test(value)) {
+                console.log('valid');
+                span.innerHTML = "";
+            } else {
+                console.log('invalid');
+                span.innerHTML = "please insert valid address";
+            }
+
+        }
+
+        var gender = "";
+        function setMale(span) {
+            gender = "male";
+            span.innerHTML = "";
+        }
+
+        function setFemale(span) {
+            gender = "female";
+            span.innerHTML = "";
+        }
+
+        function reCheck(male, female, span) {
+            if (!male.checked && !female.checked) {
+                span.innerHTML = "Please select gender";
+            } else {
+                span.innerHTML = "";
+
+            }
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
