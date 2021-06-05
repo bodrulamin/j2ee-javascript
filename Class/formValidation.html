@@ -25,43 +25,73 @@
 </head>
 
 <body>
+
     <div class="inputbox">
-        <label for="">ID</label>
-        <input id="id" onfocusout="validateId(this.value,idMsg)" />
+        <label>ID</label>
+        <input id="stId" oninput="validateId(this.value,idMsg)" />
         <span class="msg" id="idMsg"></span>
     </div>
 
     <div class="inputbox">
-
-        <label for="">Name</label>
-        <input id="name" onfocusout="validateName(this.value,nameMsg)" />
+        <label>Name</label>
+        <input id="stName" oninput="validateName(this.value,nameMsg)" />
         <span class="msg" id="nameMsg"></span>
     </div>
 
     <div class="inputbox">
-        <label for="">Mobile</label>
-        <input id="mobile" onfocusout="validateMob(this.value,mobMsg)" />
+        <label>Mobile</label>
+        <input id="mobile" oninput="validateMob(this.value,mobMsg)" />
         <span class="msg" id="mobMsg"></span>
+    </div>
+    <div class="inputbox">
+        <label>Email</label>
+        <input id="email" oninput="validateEmail(this.value,emailMsg)" />
+        <span class="msg" id="emailMsg"></span>
     </div>
 
     <div class="inputbox">
-        <label for="">Address</label>
-        <input id="address" onfocusout="validateAddress(this.value,addMsg)" />
+        <label>Address</label>
+        <textarea id="address" oninput="validateAddress(this.value,addMsg)"></textarea>
         <span class="msg" id="addMsg"></span>
     </div>
 
     <div class="inputbox">
-        <label for="">Gender</label>
+        <label>Gender</label>
         <input type="radio" onclick="setMale(genMsg)" name="gender" id="male" />Male
         <input type="radio" onclick="setFemale(genMsg)" name="gender" id="female" />Female
         <span class="msg" id="genMsg"></span>
 
     </div>
 
-    <button onclick="reCheck(male,female,genMsg)">Submit</button>
+    <div class="inputbox">
+        <label>Course</label>
+        <select id="courseSeletor">
+            <option value="jee">JEE</option>
+            <option value="c">C# .NET</option>
+            <option value="gave">GAVE</option>
+        </select>
+        <span class="msg" id="courseMsg"></span>
+
+    </div>
+
+    <div class="inputbox">
+        <label>Skill</label>
+        <input type="checkbox" class="skills" />JavaScript
+        <input type="checkbox" class="skills" />Python
+        <input type="checkbox" class="skills" />Java
+
+        <span class="msg" id="skillMsg"></span>
+
+    </div>
+
+    <button onclick="reCheck(stId,stName,mobile,email, address,
+    male,female, courseSeletor,idMsg,nameMsg,
+        mobMsg,emailMsg,addMsg,courseMsg ,genMsg)">Submit</button>
+
+
+
 
     <script>
-
         function validateId(value, span) {
             var reg = /^[0-9]{6}$/;
 
@@ -70,7 +100,7 @@
                 span.innerHTML = "";
             } else {
                 console.log('invalid');
-                span.innerHTML = "it is invalid";
+                span.innerHTML = "it is invalid (insert 6 digits)";
             }
 
         }
@@ -115,6 +145,30 @@
 
         }
 
+
+        function validateEmail(value, span) {
+            var reg = /^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,5}$/;
+
+            if (reg.test(value.toLocaleLowerCase())) {
+                console.log('valid');
+                span.innerHTML = "";
+
+            } else {
+                console.log('invalid');
+                span.innerHTML = "insert valid email addres";
+            }
+
+
+        }
+        function validateGender(male, female, span) {
+            if (!male.checked && !female.checked) {
+                span.innerHTML = "Please select gender";
+            } else {
+                span.innerHTML = "";
+
+            }
+        }
+
         var gender = "";
         function setMale(span) {
             gender = "male";
@@ -126,14 +180,25 @@
             span.innerHTML = "";
         }
 
-        function reCheck(male, female, span) {
-            if (!male.checked && !female.checked) {
-                span.innerHTML = "Please select gender";
-            } else {
-                span.innerHTML = "";
 
-            }
+
+        function reCheck(
+            id, stName, mobile, email, address, male, female,
+            courseSeletor, idMsg, nameMsg,
+            mobMsg, emailMsg, addMsg, courseMsg, genMsg
+        ) {
+
+            validateId(stId.value, idMsg);
+            validateName(stName.value, nameMsg);
+            validateMob(mobile.value, mobMsg);
+            validateEmail(email.value, emailMsg);
+            validateAddress(address.value, addMsg);
+            validateGender(male, female, genMsg);
+
+
+
         }
+
 
 
 

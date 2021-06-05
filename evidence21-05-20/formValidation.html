@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+</head>
+
+<style>
+    input[type=text] {
+        display: block;
+    }
+
+    label {
+        display: inline-block;
+        margin-top: 25px;
+    }
+</style>
+
+<body>
+
+
+
+    <label for="stId">ID</label> <input type="text" placeholder="student id" name="stId" id="stId">
+    <div id="idMsg"></div>
+
+    <label for="stName">Name</label> <input type="text" placeholder="student name" name="stName" id="stName">
+    <div id="nameMsg"></div>
+
+    <label for="stName">Course Name</label>
+    <select name="cSeletor" id="cSelector">
+        <option value=""></option>
+        <option value="jee">JEE</option>
+        <option value="gave">GAVE</option>
+        <option value="c#">C#</option>
+    </select>
+
+    <div id="courseMsg"></div>
+
+    <input type="button" onclick="validateForm(stId,idMsg,stName,nameMsg,cSelector,courseMsg,submitMsg)" value="submit">
+    <div id="submitMsg"></div>
+
+
+
+    <script>
+        // name not empty, id 6 char, course, 
+        function validateForm(stId, idMsg, stName, nameMsg, cSelector, courseMsg, submitMsg) {
+            clearMsg(idMsg);
+            clearMsg(nameMsg);
+            clearMsg(courseMsg);
+
+            if (stId.value.length != 6) {
+                idMsg.innerHTML = 'ID should 6 charecters long'
+            }
+            if (stName.value == "") {
+                nameMsg.innerHTML = 'Name Cannot be empty'
+            }
+            if (cSelector.value == "") {
+                courseMsg.innerHTML = 'Please Select Course Name'
+            }
+
+            if (stId.value.length == 6 && stName.value != "" && cSelector.value != "") {
+
+                var html = `
+    <html>
+    <head>
+        <title>Submitted Form</title>
+    </head>
+    
+    <table border="1" cellspacing="0" width = 500px>
+        <caption>Submitted Information</caption>
+        <tr>
+            <td>ID</td>
+            <td>${stId.value}</td>
+        </tr>
+
+        <tr>
+            <td>Name</td>
+            <td>${stName.value}</td>
+        </tr>
+
+        <tr>
+            <td>Course</td>
+            <td>${cSelector.value}</td>
+        </tr>
+    </table>
+
+     
+    </html>
+ 
+`;
+
+
+                var win = window.open();
+                win.document.write(html);
+
+
+
+
+            }
+
+
+        }
+
+        function clearMsg(msg) {
+            msg.innerHTML = "";
+        }
+
+
+    </script>
+
+</body>
+
+</html>

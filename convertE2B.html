@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input type="text" name="userinput" oninput="convert(this.value,result)" id="userinput">
+    <button onclick="convert(userinput.value,result)">Convert</button>
+    <div id="result"></div>
+<script>
+
+
+function convert(uvalue,result) {
+
+
+   
+  uvalue =  uvalue.replace("া","a");
+  uvalue =  uvalue.replace("আ","a");
+  uvalue =  uvalue.replace("ম","m");
+  uvalue =  uvalue.replace("র","r");
+  uvalue =  uvalue.replace("স","s");
+  uvalue =  uvalue.replace("ন","n");
+  uvalue =  uvalue.replace("না","n");
+  uvalue =  uvalue.replace("ব","b");
+  uvalue =  uvalue.replace("ং","ng");
+  uvalue =  uvalue.replace("ল","l");
+  uvalue =  uvalue.replace("ম","m");
+  uvalue =  uvalue.replace("ি","i");
+  uvalue =  uvalue.replace("ত","t");
+  uvalue =  uvalue.replace("য়","y");
+  uvalue =  uvalue.replace("ভ","v");
+  uvalue =  uvalue.replace("ো","o");
+  uvalue =  uvalue.replace("া","a");
+    
+    result.innerHTML = uvalue;
+    
+}
+
+</script>
+
+</body>
+</html>

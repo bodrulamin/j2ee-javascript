@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<style>
+    input[type=text] {
+        display: block;
+    }
+
+    input[type=button] {
+        display: block;
+    }
+</style>
+
+<body>
+    <form action="" onsubmit="return submitBtn()"></form>
+    id <input type="text" id="stId">
+    name <input type="text" id="stName">
+    mobile <input type="text" id="stMob">
+    email <input type="text" id="stEmail">
+    Address <textarea id="stAdd"></textarea><br>
+    course <select id="selector">
+        <option value=""></option>
+        <option value="jee">JEE</option>
+        <option value="gave">GAVE</option>
+        <option value="c">c#</option>
+    </select>
+    <br>
+    gender <input class="gen" type="radio" name="gen" id="male">Male
+    <input class="gen" type="radio" name="gen" id="female">Female
+    <input type="button" value="Submit" onclick="submitBtn()">
+    <span id="msg"></span>
+    <script>
+        var stId = document.getElementById("stId");
+        var stName = document.getElementById("stName");
+        var stMob = document.getElementById("stMob");
+        var stEmail = document.getElementById("stEmail");
+        var stAdd = document.getElementById("stAdd");
+        var selector = document.getElementById("selector");
+        var male = document.getElementById("male");
+        var female = document.getElementById("female");
+        var msg = document.getElementById("msg");
+        var emailReg = /^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,5}$/;
+        // mehedi34@gmail.com
+
+
+
+        function submitBtn() {
+            var results = [];
+
+            msg.innerHTML = "";
+            if (stId.value == "") {
+                msg.innerHTML += "<br>Student id cannot be empty";
+                return false;
+                
+            } else {
+                results.push(true);
+            }
+
+            if (stName.value == "") { msg.innerHTML += "<br>Name cannot be empty";
+                return false;
+               
+            } else {
+                results.push(true);
+            }
+
+            if (stMob.value.length != 11) {
+             msg.innerHTML += "<br>Put a valid mobile number";   return false;
+                
+            } else {
+                results.push(true);
+            }
+
+
+            if (stAdd.value == "") {
+               msg.innerHTML += "<br>Address cannot be empty";  return false;
+               
+            } else {
+                results.push(true);
+            }
+
+            if (!emailReg.test(stEmail.value)) {
+                msg.innerHTML += "<br>Put a valid email";  return false;
+              
+            } else {
+                results.push(true);
+            }
+
+
+            if (selector.value == "") {
+                  msg.innerHTML += "<br>Select a Course Name";   return false;
+           
+            } else {
+                results.push(true);
+            }
+            if (!male.checked && !female.checked) {
+                   msg.innerHTML += "<br>Select Gender"; return false;
+            
+            } else {
+                results.push(true);
+            }
+
+
+            if (validated(results)) {
+                msg.innerHTML += "<br>Form submitted Successfully";
+            }
+
+        }
+
+        function validated(results) {
+            for (var i = 0; i < results.length; i++) {
+                if (results[i] == false) {
+                    return false;
+                }
+            }            
+            return true;
+
+        }
+
+
+ 
+    </script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+
+    <style>
+       
+    </style>
+</head>
+
+<body>
+
+    Email
+    <input type="text" oninput="validateEmail(this.value)" name="" id="email">
+    <span id="msg"></span>
+</body>
+<script>
+    var msg = document.getElementById('msg');
+    var inputbox = document.getElementById('email');
+    function validateEmail(email) {
+        var re = /^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,5}$/;
+        if (re.test(email.toLowerCase())) {
+            msg.innerHTML = "Email is valid";
+            inputbox.style.borderColor = "green";
+
+        } else {
+            msg.innerHTML = "Enter a valid Email";
+           
+            inputbox.style.border = "5px solid red";
+        }
+    }
+
+
+</script>
+
+</html>

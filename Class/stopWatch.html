@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Interval</title>
+    <style>
+        body{
+            float: right;
+        }
+    </style>
+</head>
+
+
+
+
+
+<body>
+
+    <input type="button" onclick="start()" value="start">
+    <input type="button" onclick="stop()" value="stop">
+    <p id="result"></p>
+
+    <script>
+        var timerId;
+        function start() {
+
+            timerId = setInterval(changeTimer, .5);
+
+
+            var sec = 0;
+            var hr = 0;
+            var min = 0;
+            function changeTimer() {
+                sec++;
+
+                if (sec > 59) {
+                    min++;
+                    sec = 0;
+                }
+
+                if (min > 59) {
+                    hr++;
+                    min = 0;
+                }
+
+                var second = sec.toString();
+                second = second.padStart(2, "0");
+
+                var minute = min.toString();
+                minute = minute.padStart(2, "0");
+
+                var hour = hr.toString();
+                hour = hour.padStart(2, "0");
+
+                var time = hour + ":" + minute + ":" + second;
+                //var time = hour + ":" + minute + ":" + second;
+
+                document.getElementById('result').innerHTML = time;
+         
+
+            }
+        }
+
+        function stop() {
+            clearInterval(timerId);
+        }
+
+
+    </script>
+
+</body>
+
+</html>

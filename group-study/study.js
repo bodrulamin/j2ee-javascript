@@ -23,13 +23,23 @@
 // check palindrome
 
 
-var word = "masdam"
+// var word = "masdam"
 
-var revWord = ""; // loop diye o kora jay
-for(var i=word.length-1; i>=0; i--){
-  revWord = revWord + word[i];
-}
+// var revWord = ""; // loop diye o kora jay
+// for(var i=word.length-1; i>=0; i--){
+//   revWord = revWord + word[i];
+// }
  
-if(word==revWord){
-  console.log(word+ " is palindrome");
-}else console.log(word + " is not a palindrome");
+// if(word==revWord){
+//   console.log(word+ " is palindrome");
+// }else console.log(word + " is not a palindrome");
+
+function findFibonacci(n){
+  if(n==0)
+  return 0;
+  if(n==1)
+  return 1;
+   return findFibonacci(n-1)+findFibonacci(n-2);
+}
+var n = findFibonacci(20);
+console.log(n);

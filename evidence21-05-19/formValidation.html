@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style>
+
+    </style>
+</head>
+
+<body>
+ 
+    <div class="container mt-3 col-md-5 ">
+
+        <label for='studentId' class="form-label mt-3">ID</label>
+        <input class="form-control" type="text" name="studentId" id="studentId"/>
+        <div class="form-text" id="idMsg"></div>
+
+
+        <label for='studentName' class="form-label mt-3">Name</label>
+        <input class="form-control" type="text" name="studentName" id="studentName"/>
+        <div class="form-text" id="nameMsg"></div>
+
+ 
+
+        <label for='course' class="form-label mt-3">Course</label>
+
+        <select class="form-select" name="course-selector" id="course">
+            <option value=""></option>
+            <option value="JEE">JEE</option>
+            <option value="c#">C# .NET</option>
+            <option value="GAVE">GAVE</option>
+        </select>
+        <div class="form-text" id="courseMsg"></div>
+
+        <input type="button" onclick="submitValues()" value="submit" class="btn btn-primary mt-3">
+  <div class="form-text" id="msg"></div>
+
+    </div>
+  
+    <script>
+
+        // name not empty, id 6 char, course, 
+        // email validateion,
+        // factorial number
+
+        var stName = document.getElementById('studentName');
+        var stId = document.getElementById('studentId');
+        var course = document.getElementById('course');
+        var idMsg = document.getElementById('idMsg');
+        var nameMsg = document.getElementById('nameMsg');
+        var courseMsg = document.getElementById('courseMsg');
+        var msg = document.getElementById('msg');
+
+        function submitValues() {
+            msg.innerHTML = "";
+            idMsg.innerHTML = "";
+            nameMsg.innerHTML = "";
+
+
+
+            var studentName = stName.value;
+            var studentId = stId.value;
+            var courseName = course.value;
+            console.log(courseName);
+
+            if (studentId.length != 6) {
+                idMsg.innerHTML = "ID should be 6 charecters long";
+            }
+
+            if (studentName.length == "") {
+                nameMsg.innerHTML = "Name cannot be empty";
+            }
+
+            if (courseName == "") {
+                courseMsg.innerHTML = "Select a course name";
+            }
+
+
+            if(studentId.length == 6 && studentName.length != "" && courseName != ""){
+                msg.innerHTML = "submitted succesfully <br>";
+                msg.innerHTML += "ID " +studentId + "<br> Name " + studentName+"<br>" + " courseName " + courseName ;
+            }
+
+
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>
