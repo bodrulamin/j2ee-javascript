@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        button {
+            width: 30px;
+            height: 30px;
+            margin: 1px;
+        }
+
+        input[type='text']{
+            text-align: right;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <input type="text" name="" id="box">
+    <br>
+    <br>
+
+    <div class="div">
+        <button onclick="resetCal()">C</button>
+        <button onclick="insert('(')">(</button>
+        <button onclick="insert(')')">)</button>
+        <button onclick="del()"><</button>
+
+    </div>
+    <div class="div">
+        <button onclick="insert('1')">1</button>
+        <button onclick="insert('2')">2</button>
+        <button onclick="insert('3')">3</button>
+        <button onclick="insert('+')">+</button>
+
+    </div>
+    <div class="div">
+        <button onclick="insert('4')">4</button>
+        <button onclick="insert('5')">5</button>
+        <button onclick="insert('6')">6</button>
+        <button onclick="insert('-')">-</button>
+
+
+    </div>
+
+    <div class="div">
+        <button onclick="insert('7')">7</button>
+        <button onclick="insert('8')">8</button>
+        <button onclick="insert('9')">9</button>
+        <button onclick="insert('*')">*</button>
+
+    </div>
+
+    <div class="div">
+        <button onclick="insert('0')">0</button>
+        <button onclick="insert('.')">.</button>
+        <button onclick="insert('/')">/</button>
+
+        <button onclick="cal()">=</button>
+        
+
+    </div>
+
+    <script>
+        var box = document.getElementById('box');
+        function insert(b) {
+            box.value += b;          
+
+        }
+
+        function resetCal(){
+            box.value= "";
+        }
+
+        function del(){
+         var r = box.value;
+         r =  r.slice(0,-1)
+         box.value = r;
+        }
+
+        function cal(){
+            var result = eval(box.value);
+            box.value = result;
+        }
+    </script>
+
+</body>
+
+</html>
