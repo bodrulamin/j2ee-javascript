@@ -6,22 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
-
 </head>
 
 <body>
-
     ID: <input type="text" name="" id="stId"><br>
-
-    Name: <input type="text" name="" id="stName">
-    <br>
+    Name: <input type="text" name="" id="stName"> <br>
     <br>
     <button id="addBtn" onclick="addInfo()">Add</button>
-
     <br>
     <br>
     <table border="1" cellspacing=0>
-
         <thead>
             <tr>
                 <th>SL</th>
@@ -30,30 +24,26 @@
                 <th>Action</th>
             </tr>
         </thead>
-
         <tbody id="infoBody">
 
+
         </tbody>
-
     </table>
-
-
-
-
     <script>
         var infoArray = [];
-
         var stId = document.getElementById('stId');
         var stName = document.getElementById('stName');
         var addBtn = document.getElementById('addBtn');
         var infoBody = document.getElementById('infoBody');
 
-        function addInfo() {
+        var cp = 0;
 
+        function addInfo() {
             var info = {
                 stId: stId.value,
                 stName: stName.value
             }
+
 
             infoArray.push(info)
 
@@ -63,9 +53,8 @@
             generateTbody();
         }
 
-
         function generateTbody() {
-            infoBody.innerHTML = "";
+           infoBody.innerHTML = "";
             for (var i = 0; i < infoArray.length; i++) {
                 var info = infoArray[i];
                 var trTemp = `
@@ -73,36 +62,47 @@
                 <td>${i + 1}</td>
                 <td>${info.stId}</td>
                 <td>${info.stName}</td>
-                <td><button id="updateBn" onclick="update(${i})">update</button></td>
-            </tr>
- 
+                <td>
+                    <button id="updateBn" onclick="update(${i})">update</button>
+                    <button id="updateBn" onclick="del(${i})">del</button>
+                    
+                    </td>
+            </tr> 
         `
                 infoBody.innerHTML += trTemp;
             }
-
         }
 
-
+        
         function update(i) {
-            addBtn.innerHTML = "update";
-            addBtn.setAttribute('onclick', 'updateInfo(' + i + ')');
+
+            cp = i;
+ 
+            var cInfo = infoArray[cp];
+            stId.value = cInfo.stId;
+            stName.value = cInfo.stName;
+
+            addBtn.innerHTML = "update";          
+            addBtn.onclick = updateInfo;
         }
 
-
-        function updateInfo(i) {
+        function del(i){
+            infoArray.splice(i,1);
+            generateTbody();
+        }
+        function updateInfo() {
             var info = {
                 stId: stId.value,
                 stName: stName.value
             }
 
-
-            infoArray[i] = info;
+            infoArray[cp] = info;
 
             stId.value = "";
             stName.value = "";
 
             addBtn.innerHTML = "Add";
-            addBtn.setAttribute('onclick', 'addInfo()');
+            addBtn.onclick = addInfo;
 
             generateTbody();
         }
